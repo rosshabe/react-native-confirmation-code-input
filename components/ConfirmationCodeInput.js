@@ -4,7 +4,7 @@ import { View, TextInput, StyleSheet, Dimensions, ViewPropTypes } from 'react-na
 import _ from 'lodash';
 
 // if ViewPropTypes is not defined fall back to View.propType (to support RN < 0.44)
-const viewPropTypes = ViewPropTypes || View.propTypes;
+const viewPropTypes = ViewPropTypes || View;
 
 export default class ConfirmationCodeInput extends Component {
   static propTypes = {
@@ -19,7 +19,7 @@ export default class ConfirmationCodeInput extends Component {
     inactiveColor: PropTypes.string,
     ignoreCase: PropTypes.bool,
     autoFocus: PropTypes.bool,
-    codeInputStyle: TextInput.propTypes.style,
+    codeInputStyle: TextInput.style,
     containerStyle: viewPropTypes.style,
     onFulfill: PropTypes.func,
     onCodeChange: PropTypes.func,
